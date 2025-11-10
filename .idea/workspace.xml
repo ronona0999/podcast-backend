@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24dff8ea-d0d1-4613-be59-77886dedd771" name="Changes" comment="&quot;second commit&quot;">
+    <list default="true" id="24dff8ea-d0d1-4613-be59-77886dedd771" name="Changes" comment="&quot;third commit&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.env" beforeDir="false" afterPath="$PROJECT_DIR$/config.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762751194403</updated>
-      <workItem from="1762751195521" duration="4434000" />
+      <workItem from="1762751195521" duration="5214000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;second commit&quot;">
       <option name="closed" value="true" />
@@ -67,7 +68,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762755692850</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;third commit&quot;">
+      <option name="closed" value="true" />
+      <created>1762756295333</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762756295333</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +84,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;second commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;second commit&quot;" />
+    <MESSAGE value="&quot;third commit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;third commit&quot;" />
   </component>
 </project>
