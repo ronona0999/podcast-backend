@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24dff8ea-d0d1-4613-be59-77886dedd771" name="Changes" comment="">
+    <list default="true" id="24dff8ea-d0d1-4613-be59-77886dedd771" name="Changes" comment="&quot;second commit&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.env" beforeDir="false" afterPath="$PROJECT_DIR$/config.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +57,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762751194403</updated>
-      <workItem from="1762751195521" duration="3765000" />
+      <workItem from="1762751195521" duration="4434000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;second commit&quot;">
+      <option name="closed" value="true" />
+      <created>1762755692850</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762755692850</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;second commit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;second commit&quot;" />
   </component>
 </project>
