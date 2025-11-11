@@ -2,7 +2,7 @@ import express from 'express'
 import bcrypt from 'bcryptjs'
 import { User, generateOTP } from '../models/User.js'
 import { generateToken, authenticateToken } from '../middleware/auth.js'
-import { sendOtpEmail } from '../utils/mailer.js'
+import { sendOtpEmail, sendPasswordResetEmail } from '../utils/mailer.js'
 import crypto from 'crypto'
 import { OAuth2Client } from 'google-auth-library'
 
@@ -15,22 +15,22 @@ router.post('/signup', async (req, res) => {
 
     // Validation
     if (!firstName || !lastName || !email || !password) {
-      return res.status(400).json({ 
-        message: 'All fields are required' 
+      return res.status(400).json({
+        message: 'All fields are required'
       })
     }
 
     if (password.length < 6) {
-      return res.status(400).json({ 
-        message: 'Password must be at least 6 characters long' 
+      return res.status(400).json({
+        message: 'Password must be at least 6 characters long'
       })
     }
 
     // Check if user already exists
     const existingUser = await User.findOne({ email })
     if (existingUser) {
-      return res.status(409).json({ 
-        message: 'User with this email already exists' 
+      return res.status(409).json({
+        message: 'User with this email already exists'
       })
     }
 
@@ -71,31 +71,31 @@ router.post('/login', async (req, res) => {
 
     // Validation
     if (!email || !password) {
-      return res.status(400).json({ 
-        message: 'Email and password are required' 
+      return res.status(400).json({
+        message: 'Email and password are required'
       })
     }
 
     // Find user
     const user = await User.findOne({ email })
     if (!user) {
-      return res.status(401).json({ 
-        message: 'Invalid email or password' 
+      return res.status(401).json({
+        message: 'Invalid email or password'
       })
     }
 
     // Check password
     const isPasswordValid = await bcrypt.compare(password, user.password)
     if (!isPasswordValid) {
-      return res.status(401).json({ 
-        message: 'Invalid email or password' 
+      return res.status(401).json({
+        message: 'Invalid email or password'
       })
     }
 
     // Check if user is verified
     if (!user.isVerified) {
-      return res.status(401).json({ 
-        message: 'Please verify your email before logging in' 
+      return res.status(401).json({
+        message: 'Please verify your email before logging in'
       })
     }
 
@@ -125,24 +125,24 @@ router.post('/verify-otp', async (req, res) => {
 
     // Validation
     if (!email || !otp) {
-      return res.status(400).json({ 
-        message: 'Email and OTP are required' 
+      return res.status(400).json({
+        message: 'Email and OTP are required'
       })
     }
 
     // Find user
     const user = await User.findOne({ email })
     if (!user) {
-      return res.status(404).json({ 
-        message: 'User not found' 
+      return res.status(404).json({
+        message: 'User not found'
       })
     }
 
     // Verify OTP
     const isOTPValid = user.verifyOTP(otp)
     if (!isOTPValid) {
-      return res.status(400).json({ 
-        message: 'Invalid or expired OTP' 
+      return res.status(400).json({
+        message: 'Invalid or expired OTP'
       })
     }
 
@@ -173,8 +173,8 @@ router.post('/verify-token', async (req, res) => {
     const { token } = req.body
 
     if (!token) {
-      return res.status(400).json({ 
-        message: 'Token is required' 
+      return res.status(400).json({
+        message: 'Token is required'
       })
     }
 
@@ -217,8 +217,6 @@ router.get('/profile', authenticateToken, (req, res) => {
     user: req.user
   })
 })
-
-export default router
 
 // Current user details from DB
 router.get('/me', authenticateToken, async (req, res) => {
@@ -309,3 +307,5 @@ router.post('/google', async (req, res) => {
     res.status(500).json({ message: 'Unable to login with Google' })
   }
 })
+
+export default router
